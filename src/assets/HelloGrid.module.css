@@ -1,0 +1,45 @@
+.app {
+  display: grid;
+  gap: 20px;
+}
+
+.gridItem {
+  border: 1px solid #0000001a;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gridItemLine {
+  margin: 0;
+  line-height: 200%;
+  text-align: center;
+}
+
+.gridItem:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 30px #0000001a;
+}
+
+@media (max-width: 960px) {
+  .app {
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .gridItem {
+    width: 350px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 960px) {
+  .app {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .app {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

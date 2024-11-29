@@ -1,5 +1,5 @@
-import styles from '../assets/red.module.css'
-import styles2 from '../assets/blue.module.css'
+import styles from '../assets/ModuleCSS.red.module.css'
+import styles2 from '../assets/ModuleCSS.blue.module.css'
 
 export default function ModuleCSS() {
   return (
