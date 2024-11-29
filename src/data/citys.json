@@ -6,5 +6,21 @@
     "city": "Tokyo",
     "temp": 30,
     "cost": 100
+  },
+  {
+    "index": 1,
+    "wifi": true,
+    "country": "Thailand",
+    "city": "Bangkok",
+    "temp": 25,
+    "cost": 50
+  },
+  {
+    "index": 2,
+    "wifi": false,
+    "country": "Indonesia",
+    "city": "Jakarta",
+    "temp": 28,
+    "cost": 40
   }
 ]
