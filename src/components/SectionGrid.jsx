@@ -7,27 +7,27 @@ const GridItem = (props) => {
   return (
     <a className={s.gridItem}>
       <div className={s.in + ' ' + s.ul}>
-        <p className={s.p}>{city.index}</p>
+        <p>{city.index}</p>
       </div>
       <div className={s.in + ' ' + s.ur}>
-        <p className={s.p}>{city.wifi ? 'wifi' : 'no wifi'}</p>
+        <p>{city.wifi ? 'wifi' : 'no wifi'}</p>
       </div>
       <div className={s.in + ' ' + s.core}>
         <div className={s.up}>
-          <p className={s.p}>{city.country}</p>
+          <p>{city.country}</p>
         </div>
         <div className={s.down}>
-          <p className={s.p}>{city.city}</p>
+          <p>{city.city}</p>
         </div>
       </div>
       <div className={s.in + ' ' + s.bl}>
-        <p className={s.p}>{city.temp} °C</p>
+        <p>{city.temp} °C</p>
       </div>
       <div className={s.in + ' ' + s.bc}>
-        <p className={s.p}>😎</p>
+        <p>😎</p>
       </div>
       <div className={s.in + ' ' + s.br}>
-        <p className={s.p}>{city.cost}</p>
+        <p>{city.cost}</p>
       </div>
     </a>
   )

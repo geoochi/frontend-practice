@@ -4,42 +4,42 @@ export default function HelloGrid() {
   return (
     <div className={styles.app}>
       <div className={styles.gridItem}>
-        <div className={styles.gridItemLine}>1</div>
-        <div className={styles.gridItemLine}>dasdasd</div>
-        <div className={styles.gridItemLine}>dadas</div>
-        <div className={styles.gridItemLine}>dadasddaddsad</div>
-        <div className={styles.gridItemLine}>dadas</div>
+        <p>1</p>
+        <p>dasdasd</p>
+        <p>dadas</p>
+        <p>dadasddaddsad</p>
+        <p>dadas</p>
       </div>
       <div className={styles.gridItem}>
-        <div className={styles.gridItemLine}>2</div>
-        <div className={styles.gridItemLine}>qeqwe</div>
-        <div className={styles.gridItemLine}>qeqweqwewqweqweqeeqweqeq</div>
-        <div className={styles.gridItemLine}>qeqweqwee</div>
-        <div className={styles.gridItemLine}>qeqwe</div>
-        <div className={styles.gridItemLine}>qeqweqeqe</div>
-        <div className={styles.gridItemLine}>qeqweqeqe</div>
-        <div className={styles.gridItemLine}>qeqweqeqe</div>
-        <div className={styles.gridItemLine}>qeqwewqeqweeqweqw</div>
+        <p>2</p>
+        <p>qeqwe</p>
+        <p>qeqweqwewqweqweqeeqweqeq</p>
+        <p>qeqweqwee</p>
+        <p>qeqwe</p>
+        <p>qeqweqeqe</p>
+        <p>qeqweqeqe</p>
+        <p>qeqweqeqe</p>
+        <p>qeqwewqeqweeqweqw</p>
       </div>
       <div className={styles.gridItem}>
-        <div className={styles.gridItemLine}>3</div>
-        <div className={styles.gridItemLine}>qeqwe</div>
-        <div className={styles.gridItemLine}>qeqweqwewqweqe</div>
-        <div className={styles.gridItemLine}>qeqweqwee</div>
-        <div className={styles.gridItemLine}>qeqweqwee</div>
-        <div className={styles.gridItemLine}>qeqweqwee</div>
-        <div className={styles.gridItemLine}>qeqwe</div>
-        <div className={styles.gridItemLine}>qeqwe</div>
-        <div className={styles.gridItemLine}>qeqweqeqe</div>
+        <p>3</p>
+        <p>qeqwe</p>
+        <p>qeqweqwewqweqe</p>
+        <p>qeqweqwee</p>
+        <p>qeqweqwee</p>
+        <p>qeqweqwee</p>
+        <p>qeqwe</p>
+        <p>qeqwe</p>
+        <p>qeqweqeqe</p>
       </div>
       <div className={styles.gridItem}>
-        <div className={styles.gridItemLine}>4</div>
-        <div className={styles.gridItemLine}>qeqwe</div>
-        <div className={styles.gridItemLine}>qeqweqwewqweqe</div>
-        <div className={styles.gridItemLine}>qeqweqwee</div>
-        <div className={styles.gridItemLine}>qeqweqwee</div>
-        <div className={styles.gridItemLine}>qeqwe</div>
-        <div className={styles.gridItemLine}>qeqweqeqe</div>
+        <p>4</p>
+        <p>qeqwe</p>
+        <p>qeqweqwewqweqe</p>
+        <p>qeqweqwee</p>
+        <p>qeqweqwee</p>
+        <p>qeqwe</p>
+        <p>qeqweqeqe</p>
       </div>
     </div>
   )
