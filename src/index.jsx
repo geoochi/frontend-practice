@@ -2,7 +2,7 @@ import { StrictMode, Suspense, lazy, Component } from 'react'
 import { createRoot } from 'react-dom/client'
 import { HashRouter, Routes, Route } from 'react-router'
 import './assets/index.css'
-import pages from './pages.json'
+import pages from './assets/pages.json'
 
 class ErrorBoundary extends Component {
   constructor(props) {
