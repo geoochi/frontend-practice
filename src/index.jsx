@@ -6,9 +6,6 @@ import HelloGrid from './components/HelloGrid.jsx'
 import SectionGrid from './components/SectionGrid.jsx'
 import LightDark from './components/LightDark.jsx'
 import './assets/index.css'
-import styles from './assets/LightDark.module.css'
-
-document.body.classList.add(styles.bodyTheme)
 
 createRoot(document.getElementById('root')).render(
   <HashRouter>
