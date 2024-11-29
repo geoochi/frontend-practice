@@ -4,7 +4,6 @@ import { HashRouter, Routes, Route } from 'react-router'
 import './assets/index.css'
 import sidebarItems from './sidebarItems.json'
 
-// 添加错误边界组件
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props)
