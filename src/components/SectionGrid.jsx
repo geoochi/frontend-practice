@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import s from '../assets/SectionGrid.module.css'
+import s from './SectionGrid.module.css'
 import citys from '../data/citys.json'
 
 const GridItem = (props) => {
@@ -33,7 +33,7 @@ const GridItem = (props) => {
   )
 }
 
-export default function SectionGrid() {
+const SectionGrid = () => {
   return (
     <div className={s.app}>
       {citys.map((city, key) => (
@@ -44,3 +44,5 @@ export default function SectionGrid() {
     </div>
   )
 }
+
+export default SectionGrid

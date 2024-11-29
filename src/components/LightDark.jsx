@@ -1,25 +1,23 @@
 import { useState, useEffect } from 'react'
-import styles from '../assets/LightDark.module.css'
+import styles from './LightDark.module.css'
 import sun from '../assets/sun.svg'
 import moon from '../assets/moon.svg'
 
-export default function LightDark() {
+const LightDark = () => {
   const [darkMode, setDarkMode] = useState(
     window.matchMedia('(prefers-color-scheme: dark)').matches
   )
   useEffect(() => {
     document.body.classList.add(styles.body)
 
-    // 组件卸载时移除 class
     return () => {
       document.body.classList.remove(styles.body)
       document.body.classList.remove(styles.darkMode)
-      // 重置 CSS 变量到默认值
       const root = document.documentElement
       root.style.setProperty('--bg-color', '#ffffff')
       root.style.setProperty('--text-color', '#333333')
     }
-  }, []) // 空依赖数组，只在组件挂载和卸载时执行
+  }, [])
 
   function toggleTheme() {
     setDarkMode(!darkMode)
@@ -53,3 +51,5 @@ export default function LightDark() {
     </div>
   )
 }
+
+export default LightDark

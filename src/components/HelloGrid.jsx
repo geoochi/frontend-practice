@@ -1,6 +1,6 @@
-import styles from '../assets/HelloGrid.module.css'
+import styles from './HelloGrid.module.css'
 
-export default function HelloGrid() {
+const HelloGrid = () => {
   return (
     <div className={styles.app}>
       <div className={styles.gridItem}>
@@ -44,3 +44,5 @@ export default function HelloGrid() {
     </div>
   )
 }
+
+export default HelloGrid

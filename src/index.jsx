@@ -3,7 +3,7 @@ import { HashRouter, Routes, Route } from 'react-router'
 import { Suspense } from 'react'
 import routes from './routes/routes'
 import Layout from './components/Layout'
-import './assets/index.css'
+import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <HashRouter>

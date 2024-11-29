@@ -1,7 +1,7 @@
-import styles from '../assets/ModuleCSS.red.module.css'
-import styles2 from '../assets/ModuleCSS.blue.module.css'
+import styles from './ModuleCSS.red.module.css'
+import styles2 from './ModuleCSS.blue.module.css'
 
-export default function ModuleCSS() {
+const ModuleCSS = () => {
   return (
     <>
       <p className={styles.moduleCSS}>red</p>
@@ -9,3 +9,5 @@ export default function ModuleCSS() {
     </>
   )
 }
+
+export default ModuleCSS

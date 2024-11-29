@@ -1,4 +1,4 @@
-export default function Home() {
+const Home = () => {
   return (
     <>
       <p>
@@ -9,3 +9,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home
