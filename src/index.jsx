@@ -1,28 +1,26 @@
 import { createRoot } from 'react-dom/client'
 import { HashRouter, Routes, Route, Link } from 'react-router'
-import Home from './components/Home.jsx'
-import ModuleCSS from './components/ModuleCSS.jsx'
-import HelloGrid from './components/HelloGrid.jsx'
-import SectionGrid from './components/SectionGrid.jsx'
-import LightDark from './components/LightDark.jsx'
+import routes from './routes/routes'
 import './assets/index.css'
 
 createRoot(document.getElementById('root')).render(
   <HashRouter>
     <div id='sidebar'>
-      <Link to='/'>/</Link>
-      <Link to='/ModuleCSS'>ModuleCSS</Link>
-      <Link to='/HelloGrid'>HelloGrid</Link>
-      <Link to='/SectionGrid'>SectionGrid</Link>
-      <Link to='/LightDark'>LightDark</Link>
+      {routes.map((route) => (
+        <Link key={route.path} to={route.path}>
+          {route.name}
+        </Link>
+      ))}
     </div>
     <div id='container'>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/ModuleCSS' element={<ModuleCSS />} />
-        <Route path='/HelloGrid' element={<HelloGrid />} />
-        <Route path='/SectionGrid' element={<SectionGrid />} />
-        <Route path='/LightDark' element={<LightDark />} />
+        {routes.map((route) => (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={<route.component />}
+          />
+        ))}
       </Routes>
     </div>
   </HashRouter>
