@@ -22,5 +22,21 @@
     "city": "Jakarta",
     "temp": 28,
     "cost": 40
+  },
+  {
+    "index": 0,
+    "wifi": true,
+    "country": "Netherlands",
+    "city": "Amsterdam",
+    "temp": 10,
+    "cost": 200
+  },
+  {
+    "index": 4,
+    "wifi": true,
+    "country": "France",
+    "city": "Paris",
+    "temp": 15,
+    "cost": 150
   }
 ]

@@ -1,5 +1,6 @@
 :root {
   --sidebar-width: 200px;
+  --container-padding: 20px;
 }
 
 body {
@@ -18,7 +19,6 @@ body {
   overflow-y: auto;
 }
 
-
 #sidebar a {
   text-align: center;
   padding: 10px;
@@ -34,5 +34,5 @@ body {
 
 #container {
   margin-left: var(--sidebar-width);
-  padding: 20px;
+  padding: var(--container-padding);
 }
