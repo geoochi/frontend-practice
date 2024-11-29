@@ -1,27 +1,12 @@
 :root {
-  --background-color: #ffffff;
+  --bg-color: #ffffff;
   --text-color: #333333;
 }
 
-.bodyTheme {
-  background-color: var(--background-color);
+.body {
+  background-color: var(--bg-color);
   color: var(--text-color);
-}
-
-.app {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  /* background-color: var(--background-color);
-  color: var(--text-color); */
   transition: background-color 0.3s, color 0.3s;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: #333333;
-    --text-color: #ffffff;
-  }
 }
 
 .themeToggle {
@@ -92,4 +77,9 @@
 .darkMode .sunIcon,
 .darkMode .moonIcon {
   stroke: #fff;
+}
+
+.darkMode {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }

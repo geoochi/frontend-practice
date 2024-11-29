@@ -7,31 +7,28 @@ export default function LightDark() {
   const [darkMode, setDarkMode] = useState(
     window.matchMedia('(prefers-color-scheme: dark)').matches
   )
-
   useEffect(() => {
-    const root = document.documentElement
-    document.body.classList.add(styles.bodyTheme)
+    document.body.classList.add(styles.body)
+  }, [])
 
-    if (darkMode) {
-      root.style.setProperty('--background-color', '#333333')
+  function toggleTheme() {
+    setDarkMode(!darkMode)
+    document.body.classList.toggle(styles.darkMode)
+
+    const root = document.documentElement
+    if (document.body.classList.contains(styles.darkMode)) {
+      root.style.setProperty('--bg-color', '#333333')
       root.style.setProperty('--text-color', '#ffffff')
     } else {
-      root.style.setProperty('--background-color', '#ffffff')
+      root.style.setProperty('--bg-color', '#ffffff')
       root.style.setProperty('--text-color', '#333333')
     }
-
-    return () => {
-      document.body.classList.remove(styles.bodyTheme)
-    }
-  }, [darkMode])
+  }
 
   return (
     <div className={styles.app}>
       <h1>theme: {darkMode ? 'dark' : 'light'}</h1>
-      <button
-        className={styles.themeToggle}
-        onClick={() => setDarkMode(!darkMode)}
-      >
+      <button className={styles.themeToggle} onClick={() => toggleTheme()}>
         <img
           src={sun}
           className={`${styles.icon} ${styles.sunIcon}`}
