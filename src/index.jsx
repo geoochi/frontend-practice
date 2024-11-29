@@ -2,7 +2,7 @@ import { StrictMode, Suspense, lazy, Component } from 'react'
 import { createRoot } from 'react-dom/client'
 import { HashRouter, Routes, Route } from 'react-router'
 import './assets/index.css'
-import sidebarItems from './sidebarItems.json'
+import pages from './pages.json'
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -48,7 +48,7 @@ const DynamicComponent = ({ name }) => {
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div id='sidebar'>
-      {sidebarItems.map((item) => (
+      {pages.map((item) => (
         <div key={item}>{item}</div>
       ))}
     </div>
@@ -68,7 +68,7 @@ createRoot(document.getElementById('root')).render(
             }
           />
 
-          {sidebarItems.map((item) => (
+          {pages.map((item) => (
             <Route
               key={item}
               path={`/${item.toLowerCase()}`}
