@@ -1,0 +1,126 @@
+:root {
+  --i-gap: 20px;
+  --i-size: 250px;
+  --i-pad: 15px;
+  --i-color-light: #eeeeee;
+  --i-color-dark: #aaaaaa;
+}
+
+.app {
+  display: grid;
+  gap: var(--i-gap);
+  margin: auto;
+}
+
+.gridItem {
+  background-color: var(--i-color-dark);
+  position: relative;
+  width: var(--i-size);
+  height: var(--i-size);
+  border-radius: 15px;
+  margin: auto;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gridItem {
+  color: var(--i-color-light);
+}
+
+.gridItem:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 30px var(--i-color-dark);
+}
+
+/* 2 * i-size + 1 * i-gap + 2 * c-pad-l */
+@media (max-width: 624px) {
+  .app {
+    width: calc(1 * var(--i-size));
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* 2 * i-size + 1 * i-gap + 2 * c-pad-l */
+@media (min-width: 624px) {
+  .app {
+    width: calc(2 * var(--i-size) + 1 * var(--i-gap));
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 * i-size + 2 * i-gap + 2 * c-pad-l */
+@media (min-width: 896px) {
+  .app {
+    width: calc(3 * var(--i-size) + 2 * var(--i-gap));
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 4 * i-size + 3 * i-gap + 2 * c-pad-l */
+@media (min-width: 1168px) {
+  .app {
+    width: calc(4 * var(--i-size) + 3 * var(--i-gap));
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 5 * i-size + 4 * i-gap + 2 * c-pad-l */
+@media (min-width: 1440px) {
+  .app {
+    width: calc(5 * var(--i-size) + 4 * var(--i-gap));
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.gridItem .in {
+  position: absolute;
+}
+
+.p {
+  margin: 0;
+}
+
+.in.ul {
+  top: var(--i-pad);
+  left: var(--i-pad);
+  font-size: larger;
+  font-weight: bold;
+}
+
+.in.ur {
+  top: var(--i-pad);
+  right: var(--i-pad);
+}
+
+.in.core {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 20px;
+}
+
+.in.bl {
+  bottom: var(--i-pad);
+  left: var(--i-pad);
+}
+
+.in.bc {
+  bottom: var(--i-pad);
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.in.br {
+  bottom: var(--i-pad);
+  right: var(--i-pad);
+}
+
+.in.core .up {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* .in.core .down{
+      font-size: 1rem;
+    } */

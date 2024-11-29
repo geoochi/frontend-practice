@@ -1,0 +1,10 @@
+[
+  {
+    "index": 3,
+    "wifi": true,
+    "country": "Japan",
+    "city": "Tokyo",
+    "temp": 30,
+    "cost": 100
+  }
+]
