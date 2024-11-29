@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+}
+
+#sidebar {
+  width: 150px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f0f0f0;
+  overflow-y: auto;
+}
+
+#container {
+  margin-left: 150px;
+  padding: 20px;
+}
