@@ -1,6 +1,6 @@
-import styles from './HelloGrid.module.css'
+import styles from './HelloGrid.module.css';
 
-const HelloGrid = () => {
+const HelloGrid: React.FC = () => {
   return (
     <div className={styles.app}>
       <div className={styles.gridItem}>
@@ -42,7 +42,7 @@ const HelloGrid = () => {
         <p>qeqweqeqe</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HelloGrid
+export default HelloGrid;

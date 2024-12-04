@@ -3,10 +3,11 @@ import styles from './LightDark.module.css'
 import sun from '../assets/sun.svg'
 import moon from '../assets/moon.svg'
 
-const LightDark = () => {
-  const [darkMode, setDarkMode] = useState(
+const LightDark: React.FC = () => {
+  const [darkMode, setDarkMode] = useState<boolean>(
     window.matchMedia('(prefers-color-scheme: dark)').matches
   )
+
   useEffect(() => {
     document.body.classList.add(styles.body)
 
@@ -19,7 +20,7 @@ const LightDark = () => {
     }
   }, [])
 
-  function toggleTheme() {
+  function toggleTheme(): void {
     setDarkMode(!darkMode)
     document.body.classList.toggle(styles.darkMode)
 
@@ -34,18 +35,16 @@ const LightDark = () => {
   }
 
   return (
-    <div className={styles.app}>
+    <div className={styles.container}>
       <h1>theme: {darkMode ? 'dark' : 'light'}</h1>
-      <button className={styles.themeToggle} onClick={() => toggleTheme()}>
+      <button
+        className={styles.themeToggle}
+        onClick={toggleTheme}
+      >
         <img
-          src={sun}
-          className={`${styles.icon} ${styles.sunIcon}`}
-          alt='sun'
-        />
-        <img
-          src={moon}
-          className={`${styles.icon} ${styles.moonIcon}`}
-          alt='moon'
+          src={darkMode ? moon : sun}
+          alt={darkMode ? 'moon' : 'sun'}
+          className={`${styles.icon} ${darkMode ? styles.moonIcon : styles.sunIcon}`}
         />
       </button>
     </div>

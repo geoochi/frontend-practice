@@ -5,7 +5,10 @@ import routes from './routes/routes'
 import Layout from './components/Layout'
 import './index.css'
 
-createRoot(document.getElementById('root')).render(
+const rootElement = document.getElementById('root')
+if (!rootElement) throw new Error('Failed to find the root element')
+
+createRoot(rootElement).render(
   <HashRouter>
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>

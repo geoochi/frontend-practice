@@ -2,17 +2,29 @@ import { Fragment } from 'react'
 import s from './SectionGrid.module.css'
 import citys from '../data/citys.json'
 
-const GridItem = (props) => {
-  const city = props.city
+interface City {
+  index: number;
+  wifi: boolean;
+  country: string;
+  city: string;
+  temp: number;
+  cost: number;
+}
+
+interface GridItemProps {
+  city: City;
+}
+
+const GridItem: React.FC<GridItemProps> = ({ city }) => {
   return (
     <a className={s.gridItem}>
-      <div className={s.in + ' ' + s.ul}>
+      <div className={`${s.in} ${s.ul}`}>
         <p>{city.index}</p>
       </div>
-      <div className={s.in + ' ' + s.ur}>
+      <div className={`${s.in} ${s.ur}`}>
         <p>{city.wifi ? 'wifi' : 'no wifi'}</p>
       </div>
-      <div className={s.in + ' ' + s.core}>
+      <div className={`${s.in} ${s.core}`}>
         <div className={s.up}>
           <p>{city.country}</p>
         </div>
@@ -20,20 +32,20 @@ const GridItem = (props) => {
           <p>{city.city}</p>
         </div>
       </div>
-      <div className={s.in + ' ' + s.bl}>
+      <div className={`${s.in} ${s.bl}`}>
         <p>{city.temp} °C</p>
       </div>
-      <div className={s.in + ' ' + s.bc}>
+      <div className={`${s.in} ${s.bc}`}>
         <p>😎</p>
       </div>
-      <div className={s.in + ' ' + s.br}>
+      <div className={`${s.in} ${s.br}`}>
         <p>{city.cost}</p>
       </div>
     </a>
   )
 }
 
-const SectionGrid = () => {
+const SectionGrid: React.FC = () => {
   return (
     <div className={s.app}>
       {citys.map((city, key) => (
