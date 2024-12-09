@@ -1,11 +1,11 @@
-import { lazy, ComponentType } from 'react'
+import { ComponentType } from 'react'
 
-// 使用懒加载导入组件
-const Home = lazy(() => import('../components/Home.tsx'))
-const ModuleCSS = lazy(() => import('../components/ModuleCSS.tsx'))
-const HelloGrid = lazy(() => import('../components/HelloGrid.tsx'))
-const SectionGrid = lazy(() => import('../components/SectionGrid.tsx'))
-const LightDark = lazy(() => import('../components/LightDark.tsx'))
+import Home from '../components/Home'
+import ModuleCSS from '../components/ModuleCSS'
+import HelloGrid from '../components/HelloGrid'
+import SectionGrid from '../components/SectionGrid'
+import LightDark from '../components/LightDark'
+import NotFound from '../components/NotFound'
 
 interface Route {
   path: string
@@ -19,6 +19,7 @@ const routes: Route[] = [
   { path: '/HelloGrid', name: 'HelloGrid', component: HelloGrid },
   { path: '/SectionGrid', name: 'SectionGrid', component: SectionGrid },
   { path: '/LightDark', name: 'LightDark', component: LightDark },
+  { path: '/*', name: '404', component: NotFound },
 ]
 
 export default routes
