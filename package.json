@@ -8,13 +8,15 @@
     "p-npx": "npx serve -s dist -p 4173",
     "p-py": "python -m http.server 8000 -b 127.0.0.1 -d dist"
   },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.0.2"
+  },
   "devDependencies": {
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
     "@vitejs/plugin-react": "^4.3.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router": "^7.0.2",
     "typescript": "^5.7.2",
     "vite": "^6.0.3"
   }
