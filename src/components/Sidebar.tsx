@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import routes from '../routes/routes'
+import routes from '../routes'
 
 const Sidebar: React.FC = () => {
   return (

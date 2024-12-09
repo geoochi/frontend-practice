@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import { HashRouter, Routes, Route } from 'react-router'
-import routes from './routes/routes'
+import routes from './routes'
 import Layout from './components/Layout'
 import './index.css'
 
@@ -15,7 +15,7 @@ createRoot(rootElement).render(
           <Route
             key={route.path}
             path={route.path}
-            element={<route.component />}
+            element={<route.element />}
           />
         ))}
       </Route>
