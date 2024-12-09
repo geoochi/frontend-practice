@@ -1,18 +1,17 @@
-import { Fragment } from 'react'
 import s from './SectionGrid.module.css'
 import citys from '../data/citys.json'
 
 interface City {
-  index: number;
-  wifi: boolean;
-  country: string;
-  city: string;
-  temp: number;
-  cost: number;
+  index: number
+  wifi: boolean
+  country: string
+  city: string
+  temp: number
+  cost: number
 }
 
 interface GridItemProps {
-  city: City;
+  city: City
 }
 
 const GridItem: React.FC<GridItemProps> = ({ city }) => {
@@ -49,9 +48,7 @@ const SectionGrid: React.FC = () => {
   return (
     <div className={s.app}>
       {citys.map((city, key) => (
-        <Fragment key={key}>
-          <GridItem city={city} />
-        </Fragment>
+        <GridItem key={key} city={city} />
       ))}
     </div>
   )
