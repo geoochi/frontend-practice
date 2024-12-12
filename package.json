@@ -2,7 +2,7 @@
   "type": "module",
   "packageManager": "pnpm@9.15.0",
   "scripts": {
-    "d": "vite",
+    "d": "vite --open",
     "b": "vite build",
     "p": "vite preview",
     "p-static": "npx http-server dist -a 127.0.0.1 -p 3001"
