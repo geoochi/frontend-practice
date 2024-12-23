@@ -4,6 +4,7 @@ import HelloGrid from './components/HelloGrid'
 import SectionGrid from './components/SectionGrid'
 import LightDark from './components/LightDark'
 import NotFound from './components/NotFound'
+import UseMouse from './components/UseMouse'
 
 interface Route {
   path: string
@@ -18,6 +19,7 @@ const routes: Route[] = [
   { path: '/HelloGrid', name: 'HelloGrid', element: HelloGrid },
   { path: '/SectionGrid', name: 'SectionGrid', element: SectionGrid },
   { path: '/LightDark', name: 'LightDark', element: LightDark },
+  { path: '/UseMouse', name: 'UseMouse', element: UseMouse },
 ]
 
 export default routes
