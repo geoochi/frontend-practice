@@ -21,9 +21,9 @@ const UseMouse: React.FC = () => {
         className={styles.in}
         style={{
           transform: `rotateX(${
-            mouse.y ? -(mouse.y / (outHeight / 2) - 1) * 20 : 0
+            mouse.y ? -(mouse.y / (outHeight / 2) - 1) * 15 : 0
           }deg) rotateY(${
-            mouse.x ? (mouse.x / (outWidth / 2) - 1) * 20 : 0
+            mouse.x ? (mouse.x / (outWidth / 2) - 1) * 15 : 0
           }deg)`,
         }}
       >
