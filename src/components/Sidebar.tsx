@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 import routes from '../routes'
 
-const Sidebar: React.FC = () => {
+const Sidebar = () => {
   return (
     <div id='sidebar'>
       {routes.map(

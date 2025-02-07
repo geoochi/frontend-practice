@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router'
 import Sidebar from './Sidebar'
 
-const Layout: React.FC = () => {
+const Layout = () => {
   return (
     <>
       <Sidebar />

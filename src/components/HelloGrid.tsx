@@ -1,6 +1,6 @@
 import styles from './HelloGrid.module.css';
 
-const HelloGrid: React.FC = () => {
+const HelloGrid = () => {
   return (
     <div className={styles.app}>
       <div className={styles.gridItem}>

@@ -1,17 +1,15 @@
 import s from './SectionGrid.module.css'
 import citys from '../data/citys.json'
 
-interface City {
-  index: number
-  wifi: boolean
-  country: string
-  city: string
-  temp: number
-  cost: number
-}
-
 interface GridItemProps {
-  city: City
+  city: {
+    index: number
+    wifi: boolean
+    country: string
+    city: string
+    temp: number
+    cost: number
+  }
 }
 
 const GridItem: React.FC<GridItemProps> = ({ city }) => {
@@ -44,7 +42,7 @@ const GridItem: React.FC<GridItemProps> = ({ city }) => {
   )
 }
 
-const SectionGrid: React.FC = () => {
+const SectionGrid = () => {
   return (
     <div className={s.app}>
       {citys.map((city, key) => (

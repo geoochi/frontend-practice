@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import useMouse from '@react-hook/mouse-position'
 import styles from './UseMouse.module.css'
 
-const UseMouse: React.FC = () => {
+const UseMouse = () => {
   const ref = useRef(null)
   const mouse = useMouse(ref, {
     enterDelay: 100,

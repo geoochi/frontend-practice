@@ -1,7 +1,7 @@
 import styles from './ModuleCSS.red.module.css'
 import styles2 from './ModuleCSS.blue.module.css'
 
-const ModuleCSS: React.FC = () => {
+const ModuleCSS = () => {
   return (
     <>
       <p className={styles.moduleCSS}>red</p>

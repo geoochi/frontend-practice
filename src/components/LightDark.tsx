@@ -3,7 +3,7 @@ import styles from './LightDark.module.css'
 import sun from '../assets/sun.svg'
 import moon from '../assets/moon.svg'
 
-const LightDark: React.FC = () => {
+const LightDark = () => {
   const [darkMode, setDarkMode] = useState<boolean>(
     window.matchMedia('(prefers-color-scheme: dark)').matches
   )
