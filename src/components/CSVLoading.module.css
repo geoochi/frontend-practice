@@ -1,0 +1,13 @@
+.csvTable {
+  border-collapse: collapse;
+  text-align: center;
+  margin: 0 auto;
+}
+.csvTable td,
+.csvTable th {
+  border: 1px black solid;
+  padding: 10px 30px;
+}
+.csvTable th {
+  background-color: lightgray;
+}

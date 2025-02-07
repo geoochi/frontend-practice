@@ -8,6 +8,7 @@ const HelloGrid = lazy(() => import('./components/HelloGrid'))
 const SectionGrid = lazy(() => import('./components/SectionGrid'))
 const LightDark = lazy(() => import('./components/LightDark'))
 const UseMouse = lazy(() => import('./components/UseMouse'))
+const CSVLoading = lazy(() => import('./components/CSVLoading'))
 
 interface Route {
   path: string
@@ -23,6 +24,7 @@ const routes: Route[] = [
   { path: '/SectionGrid', name: 'SectionGrid', element: SectionGrid },
   { path: '/LightDark', name: 'LightDark', element: LightDark },
   { path: '/UseMouse', name: 'UseMouse', element: UseMouse },
+  { path: '/CSVLoading', name: 'CSVLoading', element: CSVLoading },
 ]
 
 export default routes
