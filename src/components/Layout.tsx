@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router'
+import { Suspense } from 'react'
 import Sidebar from './Sidebar'
 
 const Layout = () => {
@@ -6,7 +7,9 @@ const Layout = () => {
     <>
       <Sidebar />
       <div id='container'>
-        <Outlet />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
       </div>
     </>
   )

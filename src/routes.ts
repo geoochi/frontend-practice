@@ -1,10 +1,13 @@
+import { lazy } from 'react'
 import Home from './components/Home'
-import ModuleCSS from './components/ModuleCSS'
-import HelloGrid from './components/HelloGrid'
-import SectionGrid from './components/SectionGrid'
-import LightDark from './components/LightDark'
 import NotFound from './components/NotFound'
-import UseMouse from './components/UseMouse'
+
+// 使用 lazy 动态导入其他组件
+const ModuleCSS = lazy(() => import('./components/ModuleCSS'))
+const HelloGrid = lazy(() => import('./components/HelloGrid'))
+const SectionGrid = lazy(() => import('./components/SectionGrid'))
+const LightDark = lazy(() => import('./components/LightDark'))
+const UseMouse = lazy(() => import('./components/UseMouse'))
 
 interface Route {
   path: string
