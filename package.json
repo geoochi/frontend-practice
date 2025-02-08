@@ -4,8 +4,7 @@
   "scripts": {
     "d": "vite --open",
     "b": "vite build",
-    "p": "vite preview",
-    "p-static": "npx http-server dist -a 127.0.0.1 -p 3001"
+    "p": "pnpx http-server dist -a 127.0.0.1 -p 3001"
   },
   "dependencies": {
     "@react-hook/mouse-position": "^4.1.3",
