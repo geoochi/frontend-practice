@@ -1,14 +1,5 @@
-:root {
-  --sidebar-width: 200px;
-  --container-padding: 20px;
-}
-
-body {
-  margin: 0;
-}
-
 #sidebar {
-  width: var(--sidebar-width);
+  width: 200px;
   height: 100vh;
   position: fixed;
   display: flex;
@@ -33,6 +24,5 @@ body {
 }
 
 #container {
-  margin-left: var(--sidebar-width);
-  padding: var(--container-padding);
+  margin-left: 200px;
 }

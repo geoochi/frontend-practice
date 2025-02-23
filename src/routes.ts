@@ -1,9 +1,6 @@
-import Home from './components/Home'
 import NotFound from './components/NotFound'
-
-// 使用 lazy 动态导入其他组件
+import Home from './components/Home'
 import ModuleCSS from './components/ModuleCSS'
-import HelloGrid from './components/HelloGrid'
 import SectionGrid from './components/SectionGrid'
 import LightDark from './components/LightDark'
 import UseMouse from './components/UseMouse'
@@ -21,7 +18,6 @@ const routes: Route[] = [
   { path: '/*', name: '404', element: NotFound },
   { path: '/', name: 'Home', element: Home },
   { path: '/ModuleCSS', name: 'ModuleCSS', element: ModuleCSS },
-  { path: '/HelloGrid', name: 'HelloGrid', element: HelloGrid },
   { path: '/SectionGrid', name: 'SectionGrid', element: SectionGrid },
   { path: '/LightDark', name: 'LightDark', element: LightDark },
   { path: '/UseMouse', name: 'UseMouse', element: UseMouse },
