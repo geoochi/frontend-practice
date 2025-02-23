@@ -5,10 +5,7 @@ import Layout from './components/Layout'
 import './index.css'
 import './global.css'
 
-const rootElement = document.getElementById('root')
-if (!rootElement) throw new Error('Failed to find the root element')
-
-createRoot(rootElement).render(
+createRoot(document.getElementById('root')!).render(
   <HashRouter>
     <Routes>
       <Route element={<Layout />}>
