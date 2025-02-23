@@ -15,7 +15,7 @@ export default function ToggleBtn() {
       )}
       style={{
         justifyContent: isOn ? 'flex-end' : 'flex-start',
-        backgroundColor: isOn ? '#74caff' : '#888',
+        backgroundColor: isOn ? '#057cfa' : '#cacaca',
       }}
       onClick={toggleSwitch}
     >
