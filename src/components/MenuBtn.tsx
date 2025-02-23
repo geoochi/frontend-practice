@@ -1,10 +1,10 @@
 import s from './MenuBtn.module.css'
 import { useState } from 'react'
 
-export default function MenuBtn() {
+const MenuBtn: React.FC = () => {
   const [isActive, setIsActive] = useState(false)
   return (
-    <div>
+    <div className='flex flex-col items-center justify-center'>
       <div
         className={s.menubtn + ' ' + (isActive ? s.active : '')}
         onClick={() => setIsActive(!isActive)}
@@ -17,3 +17,5 @@ export default function MenuBtn() {
     </div>
   )
 }
+
+export default MenuBtn

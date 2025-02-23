@@ -1,53 +1,55 @@
-import { useState, useEffect } from 'react'
-import styles from './LightDark.module.css'
 import sun from '../assets/sun.svg'
 import moon from '../assets/moon.svg'
+import useTheme from '../hooks/useTheme'
+import { cn } from '@/lib/utils'
+import { motion } from 'motion/react'
 
-const LightDark = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-  )
-
-  useEffect(() => {
-    document.body.classList.add(styles.body)
-
-    return () => {
-      document.body.classList.remove(styles.body)
-      document.body.classList.remove(styles.darkMode)
-      const root = document.documentElement
-      root.style.setProperty('--bg-color', '#ffffff')
-      root.style.setProperty('--text-color', '#333333')
-    }
-  }, [])
-
-  function toggleTheme(): void {
-    setDarkMode(!darkMode)
-    document.body.classList.toggle(styles.darkMode)
-
-    const root = document.documentElement
-    if (document.body.classList.contains(styles.darkMode)) {
-      root.style.setProperty('--bg-color', '#333333')
-      root.style.setProperty('--text-color', '#ffffff')
-    } else {
-      root.style.setProperty('--bg-color', '#ffffff')
-      root.style.setProperty('--text-color', '#333333')
-    }
-  }
-
+const LightDark: React.FC = () => {
+  const { theme, setTheme } = useTheme()
+  const toggleSwitch = () => setTheme(theme === 'dark' ? 'light' : 'dark')
   return (
-    <div className={styles.container}>
-      <h1>theme: {darkMode ? 'dark' : 'light'}</h1>
+    <>
       <button
-        className={styles.themeToggle}
-        onClick={toggleTheme}
+        className={cn(
+          'relative w-[60px] h-[32px] px-[2px]',
+          'rounded-full cursor-pointer flex items-center'
+        )}
+        style={{
+          justifyContent: theme === 'dark' ? 'flex-end' : 'flex-start',
+          backgroundColor: theme === 'dark' ? '#222222' : '#cacaca',
+        }}
+        onClick={toggleSwitch}
       >
-        <img
-          src={darkMode ? moon : sun}
-          alt={darkMode ? 'moon' : 'sun'}
-          className={`${styles.icon} ${darkMode ? styles.moonIcon : styles.sunIcon}`}
-        />
+        <motion.div
+          className='w-[28px] h-[28px] rounded-full flex items-center justify-center relative'
+          layout
+          transition={{
+            type: 'spring',
+            duration: 0.2,
+            bounce: 0,
+          }}
+        >
+          <img
+            src={sun}
+            alt='light theme'
+            className='w-[20px] h-[20px] absolute'
+            style={{
+              opacity: theme === 'dark' ? 0 : 1,
+              transition: 'opacity 0.2s',
+            }}
+          />
+          <img
+            src={moon}
+            alt='dark theme'
+            className='w-[20px] h-[20px] absolute'
+            style={{
+              opacity: theme === 'dark' ? 1 : 0,
+              transition: 'opacity 0.2s',
+            }}
+          />
+        </motion.div>
       </button>
-    </div>
+    </>
   )
 }
 

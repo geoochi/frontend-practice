@@ -9,9 +9,9 @@
 .app {
   display: grid;
   gap: var(--grid-gap);
-  margin: auto;
+  /* margin: auto; */
   /* width: 100%; */
-  text-align: center;
+  /* text-align: center; */
   grid-template-columns: repeat(1, 1fr);
 }
 

@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
 import Papa, { ParseResult } from 'papaparse'
 import csvString from '../data/CSVLoading.csv?raw'
-import s from './CSVLoading.module.css'
 
 interface Row {
   [key: string]: string
 }
 
-const CSVLoading = () => {
+const CSVLoading: React.FC = () => {
   const [data, setData] = useState<Row[]>([])
   const [cols, setCols] = useState<string[]>([])
 
@@ -44,11 +43,11 @@ const CSVLoading = () => {
   }
 
   return (
-    <table className={s.csvTable}>
+    <table className='border-collapse text-center w-fit'>
       <tbody>
         <tr>
           {cols.map(col => (
-            <th key={col}>
+            <th className='border-1 px-[30px] py-[10px]' key={col}>
               {col}
             </th>
           ))}
@@ -56,7 +55,7 @@ const CSVLoading = () => {
         {data.map((row, i) => (
           <tr key={i}>
             {cols.map((col, j) => (
-              <td key={`${i}-${j}`}>
+              <td className='border-1 px-[30px] py-[10px]' key={`${i}-${j}`}>
                 {row[col] !== '' ? row[col] : ''}
               </td>
             ))}
