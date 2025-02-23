@@ -10,6 +10,7 @@ const LightDark = lazy(() => import('./components/LightDark'))
 const UseMouse = lazy(() => import('./components/UseMouse'))
 const CSVLoading = lazy(() => import('./components/CSVLoading'))
 const MenuBtn = lazy(() => import('./components/MenuBtn'))
+const ToggleBtn = lazy(() => import('./components/ToggleBtn'))
 
 interface Route {
   path: string
@@ -27,6 +28,7 @@ const routes: Route[] = [
   { path: '/UseMouse', name: 'UseMouse', element: UseMouse },
   { path: '/CSVLoading', name: 'CSVLoading', element: CSVLoading },
   { path: '/MenuBtn', name: 'MenuBtn', element: MenuBtn },
+  { path: '/ToggleBtn', name: 'ToggleBtn', element: ToggleBtn },
 ]
 
 export default routes
