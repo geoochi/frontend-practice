@@ -1,0 +1,59 @@
+.menubtn {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menubtn::before,
+.menubtn::after,
+.menubtn span {
+  background: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.menubtn span {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.menubtn::before,
+.menubtn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.menubtn::before {
+  top: 0;
+}
+
+.menubtn::after {
+  bottom: 0;
+}
+
+.menubtn.active span {
+  opacity: 0;
+}
+
+.menubtn.active::before {
+  transform: translateY(9px) rotate(33.69deg);
+}
+
+.menubtn.active::after {
+  transform: translateY(-9px) rotate(-33.69deg);
+}
+
+.hello {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.hello.active {
+  opacity: 1;
+}
