@@ -6,7 +6,6 @@ import { motion } from 'motion/react'
 
 const LightDark: React.FC = () => {
   const { theme, setTheme } = useTheme()
-  const toggleSwitch = () => setTheme(theme === 'dark' ? 'light' : 'dark')
   return (
     <>
       <button
@@ -19,7 +18,7 @@ const LightDark: React.FC = () => {
           justifyContent: theme === 'dark' ? 'flex-end' : 'flex-start',
           backgroundColor: theme === 'dark' ? '#222222' : '#ffffff',
         }}
-        onClick={toggleSwitch}
+        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
         <motion.div
           className='w-[28px] h-[28px] rounded-full flex items-center justify-center relative'
