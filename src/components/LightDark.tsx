@@ -12,11 +12,12 @@ const LightDark: React.FC = () => {
       <button
         className={cn(
           'relative w-[60px] h-[32px] px-[2px]',
-          'rounded-full cursor-pointer flex items-center'
+          'rounded-full cursor-pointer flex items-center',
+          'transition-colors duration-300'
         )}
         style={{
           justifyContent: theme === 'dark' ? 'flex-end' : 'flex-start',
-          backgroundColor: theme === 'dark' ? '#222222' : '#cacaca',
+          backgroundColor: theme === 'dark' ? '#222222' : '#ffffff',
         }}
         onClick={toggleSwitch}
       >
