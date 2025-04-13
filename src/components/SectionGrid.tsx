@@ -1,5 +1,5 @@
 import s from './SectionGrid.module.css'
-import citys from '../data/citys.json'
+import citys from '@/data/citys.json'
 
 interface GridItemProps {
   city: {

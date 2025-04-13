@@ -1,0 +1,27 @@
+@keyframes to-down {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes to-down-2 {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animation1 {
+  animation: to-down linear infinite 2s;
+}
+
+.animation2 {
+  animation: to-down-2 linear infinite 3s;
+}

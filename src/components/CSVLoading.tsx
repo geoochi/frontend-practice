@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Papa, { ParseResult } from 'papaparse'
-import csvString from '../data/CSVLoading.csv?raw'
+import csvString from '@/data/CSVLoading.csv?raw'
 
 interface Row {
   [key: string]: string

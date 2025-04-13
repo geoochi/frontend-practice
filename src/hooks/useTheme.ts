@@ -10,9 +10,7 @@ function useTheme() {
       return savedTheme
     }
     // 如果没有保存的主题，则使用系统偏好
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light'
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   })
 
   useEffect(() => {
