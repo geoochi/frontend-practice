@@ -6,13 +6,7 @@ import LightDark from '@/components/LightDark'
 const Sidebar: React.FC = () => {
   const location = useLocation()
   return (
-    <div
-      className={cn(
-        'flex flex-col justify-center w-[200px] h-full',
-        'bg-[#f0f0f0] dark:bg-[#111] overflow-y-auto',
-        'transition-colors duration-300'
-      )}
-    >
+    <div className={cn('flex flex-col justify-center w-[200px] h-full', 'bg-[#f0f0f0] dark:bg-[#111] overflow-y-auto')}>
       <div className='p-[20px] my-[10px] flex justify-center'>
         <LightDark />
       </div>
